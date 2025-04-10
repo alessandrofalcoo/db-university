@@ -47,3 +47,21 @@ WHERE hour > '14:00:00' AND `date` = '2020-06-20';
 ## ES.6
 
 
+SELECT *
+FROM degrees
+WHERE level = 'magistrale';
+
+
+## ES.7
+
+
+SELECT *
+FROM departments
+
+
+## ES. 8
+
+
+SELECT *
+FROM teachers
+WHERE phone IS NULL 
