@@ -22,3 +22,28 @@ WHERE  date_of_birth >= '1990-01-01' AND date_of_birth <= '1990-12-31';
 SELECT *
 FROM courses
 WHERE cfu > 10;
+
+
+## ES.3
+
+SELECT * 
+FROM students 
+WHERE timestampdiff(YEAR, date_of_birth, '2025-04-10') > 30;
+
+
+## ES.4
+
+SELECT *
+FROM courses
+WHERE period = 'I semestre' AND year = 1;
+
+
+## ES.5
+
+SELECT *
+FROM exams
+WHERE hour > '14:00:00' AND `date` = '2020-06-20';
+
+## ES.6
+
+
