@@ -59,3 +59,9 @@ WHERE departments.name LIKE '%Matematica'
 
 ## ES 7
 
+SELECT student_id, course_id, COUNT(*) AS Attempts, MAX(exam_student.vote) AS 'Voto massimo'
+FROM students
+JOIN exam_student ON exam_student.student_id = students.id
+JOIN exams ON exam_student.exam_id = exams.id
+WHERE exam_student.vote >= 18
+GROUP BY student_id, course_id
