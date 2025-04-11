@@ -65,3 +65,23 @@ JOIN exam_student ON exam_student.student_id = students.id
 JOIN exams ON exam_student.exam_id = exams.id
 WHERE exam_student.vote >= 18
 GROUP BY student_id, course_id
+
+## GROUP BY
+
+1. Contare quanti iscritti ci sono stati ogni anno
+2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+3. Calcolare la media dei voti di ogni appello d'esame
+4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+
+
+## ES 1
+
+SELECT YEAR(enrolment_date) AS anno, COUNT(*) AS iscritti
+FROM students
+GROUP BY YEAR(enrolment_date)
+ORDER BY YEAR(enrolment_date)
+
+## ES 2
+SELECT office_address, COUNT(*) AS 'N insegnanti'
+FROM teachers
+GROUP BY office_address
