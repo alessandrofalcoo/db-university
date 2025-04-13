@@ -85,3 +85,13 @@ ORDER BY YEAR(enrolment_date)
 SELECT office_address, COUNT(*) AS 'N insegnanti'
 FROM teachers
 GROUP BY office_address
+
+## ES 3
+SELECT exam_id, ROUND(AVG(vote), 0) AS media
+FROM exam_student
+GROUP BY exam_id;
+
+## ES 4
+SELECT department_id, COUNT(*) AS degrees_courses
+FROM degrees
+GROUP BY department_id
